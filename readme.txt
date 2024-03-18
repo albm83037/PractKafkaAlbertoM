@@ -1,34 +1,21 @@
 README 
 
+Proyecto realizado por: ALBERTO MARTÍN
+
 Profesor : Sergio.khayyat@gmail.com
 
+Este proyecto va a coger de un fichero de texto las frases, las va a analizar y va a dar un resultado en una tabla de ksqldb donde mostrará los resultados agrupados para ver cuantos hay de cada tipo de sentimiento y la media de cada tipo.
+
+Para poder ejecutarlo, es necesario tener docker desktop instalado así como la versión de python 3.10.4
 
 Tengo un fichero .yml llamado docker-compose.yml y para cargar el entorno Docker, nos posicinamos en el directorio y lo lanzamos de la siguiente manera:
 
 >Docker compose up -d
-
-Tengo instalado python la siguiente versión:
-Versión de python 3.10.4
 
 
 pip install kafka-python
 pip isntall transformers
 pip install torch
 
-
-Primero creamos el topic, para hacerlo podemos o bien ejecutar :
-
-kafka-topics --bootstrap-server kafka1:19092 --create --topic tweets --partitions 1 --replication-factor 1
-
-Después nos posicionamos en el directorio de la práctica donde estan los códigos de python y lanzamos el consumer:
-
->python .\consumer1.py
-
->python .\consumer2.py
-
->python .\consumer1OtroGrupo.py
-
-El siguiente paso es lanzar el producer. Para hacerlo:
-
->python .\producer.py
+Ver en /doc la documentación del proyecto para ver como poder ejecutarlo.
 
